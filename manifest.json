@@ -1,0 +1,26 @@
+{
+    "name": "EBS명조",
+    "version": "1.0.0",
+    "description": "EBS폰트를 나눔 명조 폰트로.",
+    "offline_enabled": true,
+    "permissions": [
+      "http://*.ebssw.kr/*", "https://*.ebssw.kr/*", "tabs"
+    ],
+    "browser_action": {
+      "default_title": "EBS명조",
+      "default_popup": "views/popup.html"
+    },
+    "content_scripts": [
+      {
+        "run_at": "document_start",
+        "matches": [
+            "http://*.ebssw.kr/*", 
+            "https://*.ebssw.kr/*"
+        ],
+        "css": [
+          "styles/font.css"
+        ]
+      }
+    ],
+    "manifest_version": 2
+  }
